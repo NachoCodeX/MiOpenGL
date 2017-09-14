@@ -71,6 +71,20 @@ class Window(object):
     def drawTriangle(slef):
         glBegin(GL_TRIANGLES)
         glVertex3f()
+
+    def drawArrayPoints(self,POINTS):
+        for i in range(len(POINTS)):
+            self.drawPoint(POINTS[i][0],POINTS[i][1],size=2,color=[1,0,0])
+        # glColor3ub(255,255,255)
+        # glEnableClientState(GL_VERTEX_ARRAY)
+        # glEnableClientState(GL_COLOR_ARRAY)
+        # glVertexPointer(2,GL_FLOAT,sys.getsizeof(POINTS),POINTS[0][1])
+        # glPointSize(3.0)
+        # glDrawArrays(GL_POINTS,0,len(POINTS))
+        # glDisableClientState(GL_VERTEX_ARRAY)
+        # glDisableClientState(GL_COLOR_ARRAY)
+        # glFlush()
+
     #Dibuja una verga cabezon de color rosa
     def drawDick(self):
         self.drawRect(20*10,20,100,100,color=[1,0,1])
