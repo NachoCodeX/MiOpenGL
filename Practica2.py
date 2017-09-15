@@ -1,5 +1,5 @@
 import MiOpenGL
-# o
+
 
 
 class Window(MiOpenGL.Window):
@@ -11,7 +11,7 @@ class Window(MiOpenGL.Window):
         if(dx>= dy):
             step=dx
         else:
-            step=d
+            step=dy
 
         xin=dx/step
         yin=dy/step
@@ -27,7 +27,8 @@ class Window(MiOpenGL.Window):
         return POINTS
 
     def draw(self):
-        self.drawArrayPoints(self.DDA([0,0],[150,150]))
+        self.drawArrayPoints(self.DDA([100,100],[150,150]),color=[0,1,0])
+        # self.drawTriangle()
 w=Window()
 # w.DDA([100,100],[150,150])
 w.createWindow(800,600,'Title')
